@@ -1,0 +1,10 @@
+<div class="flex-grow text-white h-screen overflow-y-scroll no-scrollbar">
+<%= turbo_frame_tag @playlist do %>
+  <%= render "components/header" %>
+  <div class="px-8 flex flex-col space-y-1 pb-28 text-white">
+    <% @playlist.tracks.each_with_index do |track, index| %>
+      <%= render partial: "tracks/track", locals: { track: track, index: index } %>
+    <% end %>
+  </div>
+<% end %>
+</div>

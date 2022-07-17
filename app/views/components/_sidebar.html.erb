@@ -1,0 +1,19 @@
+<div class="text-gray-500 p-5 text-xs lg:text-sm border-r border-gray-900 overflow-y-scroll h-screen no-scrollbar sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex">
+  <div class="space-y-4">
+    <%= link_to logout_path, class: "flex items-center space-x-2 hover:text-white" do %>
+      <%= heroicon "logout", class: "h-5 w-5" %><p>Log out</p>
+    <% end %>
+    <%= link_to root_path, class: "flex items-center space-x-2 hover:text-white" do %>
+      <%= heroicon "home", class: "h-5 w-5" %><p>Home</p>
+    <% end %>
+    <button class="flex items-center space-x-2 hover:text-white"><%= heroicon "search", class: "h-5 w-5" %><p>Search</p></button>
+    <button class="flex items-center space-x-2 hover:text-white"><%= heroicon "library", class: "h-5 w-5" %><p>Your Library</p></button>
+    <hr class="border-t-[0.1px] border-gray-900" />
+    <button class="flex items-center space-x-2 hover:text-white"><%= heroicon "plus-circle", class: "h-5 w-5" %><p>Create Playlist</p></button>
+    <button class="flex items-center space-x-2 hover:text-white"><%= heroicon "heart", class: "h-5 w-5" %><p>Liked Songs</p></button>
+    <button class="flex items-center space-x-2 hover:text-white"><%= heroicon "rss", class: "h-5 w-5" %><p>Your Episodes</p></button>
+    <hr class="border-t-[0.1px] border-gray-900" />
+    <!-- Playlist -->
+    <%= render "components/playlists" %>
+  </div>
+</div>

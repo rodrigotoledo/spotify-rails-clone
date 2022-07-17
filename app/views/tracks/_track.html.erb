@@ -1,0 +1,15 @@
+<%= link_to track_path(track.id), class: "grid grid-cols-2 text-gray-500 py-4 px-5 hover:bg-gray-900 rounded-lg cursor-pointer" do %>
+  <div class="flex items-center space-x-4">
+    <p><%= index + 1 %></p>
+    <%= image_tag track.album.images.first["url"], class: "w-10 h-10" %>
+    <div>
+      <p class="w-36 lg:w-64 truncate text-white"><%= track.name %></p>
+      <p class="w-40 "><%= track.artists.first.name %></p>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between ml-auto md:ml-0">
+    <p class="w-40 hidden md:inline"><%= track.album.name %></p>
+    <p><%= duration(track.duration_ms) %></p>
+  </div>
+<% end %>
